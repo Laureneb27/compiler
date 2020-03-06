@@ -1,5 +1,5 @@
 exports.specialChars = {
-    newLine:        {regRule: /\r\n/g, value:'\n'},
+    newLine:        {regRule: /\n/g, value:'\n'},
     endInstruct:    {regRule: /;/g,  value:';'},
     equal:          {regRule: /=/g, value:'='},
     point:           {regRule: /\./g, value:'.'},
