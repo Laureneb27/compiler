@@ -10,7 +10,7 @@ exports.allDeclaredIsUsed = (ast) => {
     const variableIsUsed = ast
         .filter(t => t.type === "objectMethodCall")
 
-    console.log(variableIsUsed)
+    // console.log(variableIsUsed)
     // console.log(variableIAffected)
     // return 1;
 }

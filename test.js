@@ -1,5 +1,7 @@
-let testNumber=12;
-let teuber
-teuber = 1 + testNumber
-console.log(testNumber);
-console.log("hello world", message);
+let teuber;
+console.log("message");
+function abc(){
+    return 3;
+}
+teuber = 1 + testNumber;
+abc();

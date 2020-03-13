@@ -20,6 +20,10 @@ module.exports = (tokens) => {
             } else {
                 i = expression.variableValue.end;
             }
+        }else if ( i < tokens.length - 1 && tokens[i].type == constTokens.typeWord && tokens[i + 1].type == constTokens.symbolePoint) {
+            //utilisation console log
+            expression = factory.create(constParser.expressionMethodLog, tokens, i);
+            i++;
             //utilisation de methode
         } else if (i < tokens.length - 1 && tokens[i].type == constTokens.typeWord && tokens[i + 1].type == constTokens.symbolePoint) {
             expression = factory.create(constParser.expressionMethodCall, tokens, i);

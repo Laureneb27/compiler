@@ -2,9 +2,11 @@
 exports.typeVariable = 'variable';
 exports.typeString = 'string';
 
+
 exports.expressionDeclaration = "variableDeclaration";
 exports.expressionAffectation = "variableAffectation";
 exports.expressionMethodCall = "objectMethodCall";
+exports.expressionMethodLog = "logMethodCall";
 
 exports.declarationVariable = ["var", "let", "const"];
 

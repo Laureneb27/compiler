@@ -12,7 +12,6 @@ exports.from = (code) => {
         let ast = parser(tokens);
         // console.log(ast);
         let result = {
-            allConsoleIsRemove: helper.allConsoleIsRemove(ast),
             allDeclaredIsUsed: helper.allDeclaredIsUsed(ast),
             allUsedIsDeclared: helper.allUsedIsDeclared(ast),
             allExpressionFinished: helper.allExpressionFinished(ast),

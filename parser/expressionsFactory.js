@@ -4,6 +4,9 @@ const helper = require("./helper");
 
 exports.create = (type, tokens, start) => {
     switch (type) {
+        case constParser.expressionLog:
+            console.log("log => ", logMethodCall(tokens, start))
+            return logMethodCall(tokens, start);
         case constParser.expressionMethodCall:
             return objectMethodCall(tokens, start);
         case constParser.expressionDeclaration:
@@ -11,6 +14,16 @@ exports.create = (type, tokens, start) => {
         case constParser.expressionAffectation:
             return variableAffectation(tokens, start);
     }
+}
+
+const logMethodCall = (tokens,start) => {
+    console.log('tokens[start]', tokens[start])
+    let objectName = tokens[start].value;
+    if (tokens[start + 2].type != constTokens.typeWord) throw constParser.errorMissingWord;
+    let methodName = tokens[start + 2].value;
+    let arguments = helper.searchArgs(tokens, start + 3);
+    return { type: constParser.expressionMethodCall, objectName: objectName, methodName: methodName, arguments: arguments.args, end: arguments.end };
+
 }
 
 function objectMethodCall(tokens, start) {

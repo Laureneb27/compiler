@@ -16,3 +16,20 @@ exports.replaceSpecialsChars = (code) => {
     }
     return code;
 }
+
+exports.checkConsole = (t) => {
+    if(t=='¥¥'+ constTokens.consoleLog + '¥¥'){
+        return 
+    }
+    for (const charName in constTokens.specialChars) {
+        // console.log('charName', charName)
+        if (t == '*' + charName + '*') {
+            return charName;
+        }
+    }
+    return false;
+}
+
+exports.removeConsole = (t) => {
+    // return code
+}
