@@ -1,19 +1,19 @@
-exports.allDeclaredIsUsed = (ast)=> {
+exports.allDeclaredIsUsed = (ast) => {
     return 1;
 }
 
-exports.allUsedIsDeclared = (ast)=> {
+exports.allUsedIsDeclared = (ast) => {
     return 1;
 }
 
-exports.allExpressionFinished = (ast)=> {
+exports.allExpressionFinished = (ast) => {
     return 1;
 }
 
-exports.indentation = (ast)=> {
+exports.indentation = (ast) => {
     return 1;
 }
 
-exports.numberLine = (ast)=> {
+exports.numberLine = (ast) => {
     return 1;
 }
